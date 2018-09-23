@@ -1,0 +1,14 @@
+{% extends 'Panier/basePanier.html.twig' %}
+
+{% block body %}
+    <form action="{{ path('Event.validAddEvent') }}" method="post">
+        Nom de l'évenement : <input type="text" name="nom"><br><br>
+        description : <textarea name="description" cols="15" rows="4"></textarea>
+        <br><br>
+        date de l'évenement : <input type="date" name="date"><br>
+        prix : <input type="text" name="prix" ><br>
+        <input type="submit" value="valider">
+    </form>
+    <br><br>
+{% endblock %}
+

@@ -1,0 +1,9 @@
+{% extends 'baseMultiplication.html.twig' %}
+
+{% block body %}
+    {% if number is defined %}
+        {% include '/Multiplication/calculTable.html.twig'%}
+    {% else %}
+        Number is not defined
+    {% endif %}
+{% endblock %}

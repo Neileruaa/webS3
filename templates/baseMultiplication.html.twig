@@ -9,15 +9,18 @@
         {% endblock %}
     </head>
     <body>
-    {% for message in app.flashes('notice') %}
-        <div class="flash-notice">
-            {{ message }}
-        </div>
-    {% endfor %}
-    <h1> Gestion des événements</h1>
-    <hr>
-    {% include("nav.html.twig") %}
-        {% block body %}pqoefqsf{% endblock %}
+        {% block header %}
+            <h1>Multiplication</h1>
+            {% for i in 1..nbliens %}
+                <a href="{{ path('home_multiplication', {'number': i}) }}">{{ i }}</a>
+            {% endfor %}
+
+            <form method="post" action="{{ path('home_multiplication') }}">
+                <input type="text" name="chiffre" placeholder="Enter a number">
+                <input type="submit" name="validation" value="Entrer">
+            </form>
+        {% endblock %}
+        {% block body %}{% endblock %}
         {% block javascripts %}
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

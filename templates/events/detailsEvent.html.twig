@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>détails de l'événement</h1>
+
+    {{ event.id }} | {{ event.nom }} | {{ event.description }} | {{ event.date }}  | {{ event.prix }} €
+
+    <br><br><a href="/events">retour listes événements</a>
+{% endblock %}
+

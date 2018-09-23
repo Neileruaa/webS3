@@ -1,0 +1,24 @@
+<nav class="navbar is-transparent">
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="{{ path('home_panier') }}">
+                Accueil
+            </a>
+            <a class="navbar-item" href="{{ path('show_tickets') }}">
+                Tickets
+            </a>
+            <a class="navbar-item" href="https://bulma.io/">
+                AjouterTickets
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" href="{{ path('generateRandomTicket') }}">
+                GenerateTicket
+            </a>
+            <a class="navbar-item" href="{{ path('vider_panier') }}">
+                Vider le panier
+            </a>
+        </div>
+    </div>
+</nav>

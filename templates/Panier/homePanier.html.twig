@@ -1,0 +1,29 @@
+{% extends 'Panier/basePanier.html.twig' %}
+
+{% block body %}
+
+<section>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Quantité</th>
+                    <th>Prix total</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for element in panier %}
+                <tr>
+                {% for things in element %}
+                    <td>{{ things }}</td>
+                {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

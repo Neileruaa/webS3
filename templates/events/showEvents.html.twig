@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Events</h1>
+
+    <ul>
+        {% for event in events %}
+            <li>{{ event.nom }} <a href="{{ path("Event.detailsEvent", {id: event.id}) }}">détails de l'événement {{ event.id }}</a> &nbsp;
+                <a href="{{ path('Event.updateEvent', {id: event.id}) }}">Modifier</a>
+                <form action="{{ path('Event.deleteEvent') }}" method="post"  style="display: inline">
+                    <input type="hidden" value="{{ event.id }}" name="id">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit">supprimer</button>
+                </form></li>
+        {% else %}
+            pas d’événement
+        {% endfor %}
+        {#{{ dump(events) }}#}
+    </ul>
+
+
+    {{ datetoday }}
+{% endblock %}

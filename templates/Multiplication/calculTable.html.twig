@@ -1,0 +1,10 @@
+{% for message in app.flashes('error') %}
+        <div class="alert">
+            {{ message }}
+        </div>
+{% endfor %}
+<ul>
+    {% for i in 1..nbliens %}
+        <li>{{ i }} x {{ number }} = <strong class="{% if (number*i) is odd %} impair {% else %} pair {% endif %}">{{ number*i }}</strong></li>
+    {% endfor %}
+</ul>

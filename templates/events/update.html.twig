@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <form action="{{ path('Event.validUpdateEvent') }}" method="post">
+        <input type="hidden" value="{{ idEvent }}" name="id">
+        Nom de l'évenement : <input type="text" name="nom" value="{{ nameEvent }}"><br><br>
+        description : <textarea name="description" cols="15" rows="4" placeholder="{{ descriptionEvent }}"></textarea>
+        <br><br>
+        date de l'évenement : <input type="date" name="date" value="{{ event.date | date('Y-m-d')}}"><br>
+        prix : <input type="text" name="prix" value="{{ priceEvent }}"><br>
+        <input type="submit" value="valider">
+    </form>
+    <br><br>
+{% endblock %}
+

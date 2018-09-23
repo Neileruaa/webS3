@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="jumbotron">
+        <form method="post">
+            <input type="text" name="nom" placeholder="Saisir votre nom ..." >
+            <input type="submit" value="entrer">
+        </form>
+        {{ nom }}
+        {{ nom2 }}
+    </div>
+
+    <a>Lien vers l'évènement</a>
+{% endblock %}
